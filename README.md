@@ -1,21 +1,24 @@
-# AI FAQ Chatbot
+# AI FAQ Chatbot - Klinik
 
-Chatbot FAQ sederhana untuk klinik.
+[![Tests](https://github.com/riyanda-ex/ai-faq-chatbot/actions/workflows/tests.yml/badge.svg)](https://github.com/riyanda-ex/ai-faq-chatbot/actions/workflows/tests.yml)
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-### Masalah
-Pasien sering bertanya hal yang sama berulang-ulang (jam buka, biaya, cara daftar) sehingga staff kewalahan menjawab.
+Chatbot FAQ sederhana untuk klinik. Menjawab pertanyaan umum pasien (jam buka, biaya, cara daftar, jadwal dokter, obat) secara otomatis, tanpa menyimpan data pribadi.
 
-### Solusi
-Saya membuat chatbot sederhana berbasis Python yang menjawab pertanyaan umum pasien secara otomatis.
+> ⚠️ **Disclaimer Medis:** Ini demo edukasi, BUKAN pengganti diagnosis dokter. Jangan kirim NIK / No. BPJS / nama lengkap.
 
-### Teknologi
-- Python
-- Logic-based AI / Rule-based Chatbot
+## Fitur
 
-### Cara Pakai
-1. Jalankan `python app.py`
-2. Ketik pertanyaan, contoh: "jam buka klinik?"
-3. Ketik `keluar` untuk berhenti
+- Jawaban dari FAQ lokal, tanpa API eksternal (cepat, gratis, aman)
+- Validasi input, batas 500 karakter, escape HTML
+- Rate-limit sederhana per IP
+- Health check `/health`
+- 8 test otomatis + CI GitHub Actions
 
-### Pengembangan Selanjutnya
-Bisa di-upgrade pakai AI / LLM seperti OpenAI API agar bisa jawab lebih natural.
+## Cara Jalanin
+
+```bash
+pip install -r requirements.txt
+python app.py
+# Buka: http://127.0.0.1:5000
